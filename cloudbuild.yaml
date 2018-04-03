@@ -5,4 +5,4 @@ steps:
   - name: "gcr.io/cloud-builders/docker"
     args: ["build", "-t", "eu.gcr.io/soa4-integration/gcp-cd-codelab:$REVISION_ID", "-f", "Dockerfile", "."]
 images:
-  - "eu.gcr.io/soa4-integration/gcp-cd-codelab:$REVISION_ID"
+  - "gcr.io/soa4-integration/gcp-cd-codelab:$REVISION_ID"
