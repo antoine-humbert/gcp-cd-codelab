@@ -1,8 +1,8 @@
 steps:
-  - name: "eu.gcr.io/cloud-builders/go"
+  - name: "gcr.io/cloud-builders/go"
     args: ["install", "github.com/antoine-humbert/gcp-cd-codelab"]
     env: ["PROJECT_ROOT=github.com/antoine-humbert/gcp-cd-codelab"]
-  - name: "eu.gcr.io/cloud-builders/docker"
+  - name: "gcr.io/cloud-builders/docker"
     args: ["build", "-t", "eu.gcr.io/soa4-integration/gcp-cd-codelab:$REVISION_ID", "-f", "Dockerfile", "."]
 images:
   - "eu.gcr.io/soa4-integration/gcp-cd-codelab:$REVISION_ID"
